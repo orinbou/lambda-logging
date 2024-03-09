@@ -6,8 +6,8 @@ import logging
 
 logger = logging.getLogger()
 logLevelTable={'DEBUG':logging.DEBUG,'INFO':logging.INFO,'WARNING':logging.WARNING,'ERROR':logging.ERROR,'CRITICAL':logging.CRITICAL}
-if 'LOG_LEVEL' in os.environ and os.getenv("LOG_LEVEL") in logLevelTable :
-    logLevel = logLevelTable[os.getenv("LOG_LEVEL")]
+if 'LOG_LEVEL' in os.environ and os.getenv('LOG_LEVEL') in logLevelTable :
+    logLevel = logLevelTable[os.getenv('LOG_LEVEL')]
 else:
     logLevel=logging.WARNING # デフォルトは警告以上をログ出力する
 logger.setLevel(logLevel)
